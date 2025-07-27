@@ -63,17 +63,26 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "Ref Cam",
-    "current_program_scene": "Ref Cam",
+    "current_scene": "Tela + ⬋ (principal)",
+    "current_program_scene": "Tela + ⬋ (principal)",
     "scene_order": [
         {
             "name": "Ref Cam"
         },
         {
             "name": "Tela + ⬋ (principal)"
+        },
+        {
+            "name": "Tela + ⬊"
+        },
+        {
+            "name": "Tela + ⬈"
+        },
+        {
+            "name": "Tela + ⬉"
         }
     ],
-    "name": "Untitled",
+    "name": "youtube",
     "groups": [],
     "quick_transitions": [
         {
@@ -98,10 +107,20 @@
             "fade_to_black": true
         }
     ],
-    "transitions": [],
+    "transitions": [
+        {
+            "name": "Move",
+            "id": "move_transition",
+            "settings": {
+                "transition_match": "None",
+                "transition_in": "None",
+                "transition_out": "None"
+            }
+        }
+    ],
     "saved_projectors": [],
-    "current_transition": "Fade",
-    "transition_duration": 300,
+    "current_transition": "Move",
+    "transition_duration": 600,
     "preview_locked": false,
     "scaling_enabled": false,
     "scaling_level": 0,
@@ -165,7 +184,7 @@
                 {
                     "prev_ver": 503447555,
                     "name": "Advanced Mask",
-                    "uuid": "acb5a6cd-da3e-4a05-a5a0-c47195849ef9",
+                    "uuid": "a7566854-c2a3-4070-ac21-b60ded275a20",
                     "id": "advanced_masks_filter",
                     "versioned_id": "advanced_masks_filter_v2",
                     "settings": {
@@ -173,12 +192,43 @@
                         "shape_feather_type": 1,
                         "mask_source_width": 1920,
                         "mask_source_height": 1080,
-                        "shape_type": 2,
+                        "rectangle_corner_radius": 79.0,
                         "shape_center_x": 960.0,
                         "shape_center_y": 540.0,
+                        "rectangle_width": 1860.0,
+                        "rectangle_height": 1000.0,
                         "position_x": 960.0,
                         "position_y": 540.0,
                         "mask_gradient_position": 960.0
+                    },
+                    "mixers": 0,
+                    "sync": 0,
+                    "flags": 0,
+                    "volume": 1.0,
+                    "balance": 0.5,
+                    "enabled": true,
+                    "muted": false,
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "hotkeys": {},
+                    "deinterlace_mode": 0,
+                    "deinterlace_field_order": 0,
+                    "monitoring_type": 0,
+                    "private_settings": {}
+                },
+                {
+                    "prev_ver": 503447555,
+                    "name": "Glow",
+                    "uuid": "7eda3d39-bb3c-485f-acc2-a655e41597d8",
+                    "id": "obs_glow_filter",
+                    "versioned_id": "obs_glow_filter",
+                    "settings": {
+                        "blur_type": 1,
+                        "glow_size": 19.0,
+                        "glow_intensity": 209.09999999999999,
+                        "glow_fill_color": 4278239231
                     },
                     "mixers": 0,
                     "sync": 0,
@@ -212,7 +262,7 @@
                 "cur_dev_id": "dev_id_wifi",
                 "cur_dev_ip": "192.168.1.102",
                 "cur_dev_type": 1,
-                "remote_url": "",
+                "remote_url": "http://192.168.1.102:4747",
                 "activated": true,
                 "resolution_str": "1920x1080"
             },
@@ -304,6 +354,345 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.1": [],
                 "libobs.hide_scene_item.1": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 503447555,
+            "name": "Tela + ⬈",
+            "uuid": "5aa32efd-9bde-4b5d-a448-37110bdbc64e",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 2,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Tela HDMI",
+                        "source_uuid": "b3cc8a20-0ebf-4fe2-afe4-56ab4603c6f6",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Clone Cam",
+                        "source_uuid": "6a753e8b-a6fc-452b-8af2-e8c5d52cc98d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 1211.0,
+                            "y": 109.0
+                        },
+                        "scale": {
+                            "x": 0.30937498807907104,
+                            "y": 0.30925926566123962
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 503447555,
+            "name": "Tela + ⬉",
+            "uuid": "e3ff62ae-57e3-486a-945b-beaba74a353a",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 2,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Tela HDMI",
+                        "source_uuid": "b3cc8a20-0ebf-4fe2-afe4-56ab4603c6f6",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Clone Cam",
+                        "source_uuid": "6a753e8b-a6fc-452b-8af2-e8c5d52cc98d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 128.0,
+                            "y": 90.0
+                        },
+                        "scale": {
+                            "x": 0.30937498807907104,
+                            "y": 0.30925926566123962
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
+            },
+            "deinterlace_mode": 0,
+            "deinterlace_field_order": 0,
+            "monitoring_type": 0,
+            "private_settings": {}
+        },
+        {
+            "prev_ver": 503447555,
+            "name": "Tela + ⬊",
+            "uuid": "4c93789b-e315-4f1f-8fc5-db7c1f0e43ee",
+            "id": "scene",
+            "versioned_id": "scene",
+            "settings": {
+                "id_counter": 2,
+                "custom_size": false,
+                "items": [
+                    {
+                        "name": "Tela HDMI",
+                        "source_uuid": "b3cc8a20-0ebf-4fe2-afe4-56ab4603c6f6",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 1,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Clone Cam",
+                        "source_uuid": "6a753e8b-a6fc-452b-8af2-e8c5d52cc98d",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 1189.0,
+                            "y": 643.0
+                        },
+                        "scale": {
+                            "x": 0.30937498807907104,
+                            "y": 0.30925926566123962
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 2,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    }
+                ]
+            },
+            "mixers": 0,
+            "sync": 0,
+            "flags": 0,
+            "volume": 1.0,
+            "balance": 0.5,
+            "enabled": true,
+            "muted": false,
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.show_scene_item.1": [],
+                "libobs.hide_scene_item.1": [],
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
